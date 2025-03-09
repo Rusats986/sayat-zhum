@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 550">
+  <!-- Голова -->
+  <ellipse cx="200" cy="60" rx="50" ry="50" fill="#FFE0C0" stroke="#000" stroke-width="1.5"/>
+  
+  <!-- Мозг -->
+  <ellipse cx="200" cy="50" rx="38" ry="30" fill="#FFC0CB" stroke="#000" stroke-width="1" opacity="0.7"/>
+  <text x="200" y="50" font-size="10" text-anchor="middle">Мозг</text>
+  
+  <!-- Шея -->
+  <rect x="185" y="110" width="30" height="20" fill="#FFE0C0" stroke="#000" stroke-width="1.5"/>
+  
+  <!-- Туловище - более широкое -->
+  <path d="M160 130 L160 300 L240 300 L240 130 Z" fill="#FFE0C0" stroke="#000" stroke-width="1.5"/>
+  
+  <!-- Лёгкие - шире расставленные -->
+  <ellipse cx="180" cy="170" rx="22" ry="30" fill="#ADD8E6" stroke="#000" stroke-width="1"/>
+  <ellipse cx="220" cy="170" rx="22" ry="30" fill="#ADD8E6" stroke="#000" stroke-width="1"/>
+  <text x="180" y="170" font-size="10" text-anchor="middle">Л</text>
+  <text x="220" y="170" font-size="10" text-anchor="middle">Л</text>
+  
+  <!-- Сердце - более крупное -->
+  <path d="M190 190 C180 180, 170 185, 180 200 C190 215, 215 215, 225 200 C235 185, 225 180, 215 190 Z" fill="#FF6347" stroke="#000" stroke-width="1"/>
+  <text x="200" y="200" font-size="10" text-anchor="middle">Сердце</text>
+  
+  <!-- Печень - шире -->
+  <path d="M170 230 Q200 230, 230 230 Q230 260, 200 260 Q170 260, 170 230" fill="#CD853F" stroke="#000" stroke-width="1"/>
+  <text x="200" y="245" font-size="10" text-anchor="middle">Печень</text>
+  
+  <!-- Желудок -->
+  <ellipse cx="185" cy="220" rx="18" ry="20" fill="#E6E6FA" stroke="#000" stroke-width="1"/>
+  <text x="185" y="220" font-size="9" text-anchor="middle">Желудок</text>
+  
+  <!-- Кишечник - шире -->
+  <path d="M170 270 C185 275, 200 265, 215 275 C230 285, 240 275, 230 265" stroke="#FF69B4" stroke-width="5" fill="none"/>
+  <text x="200" y="282" font-size="9" text-anchor="middle">Кишечник</text>
+  
+  <!-- Почки - шире расставленные -->
+  <ellipse cx="170" cy="250" rx="10" ry="15" fill="#800080" stroke="#000" stroke-width="1"/>
+  <ellipse cx="230" cy="250" rx="10" ry="15" fill="#800080" stroke="#000" stroke-width="1"/>
+  <text x="170" y="250" font-size="8" text-anchor="middle" fill="white">П</text>
+  <text x="230" y="250" font-size="8" text-anchor="middle" fill="white">П</text>
+  
+  <!-- Руки - шире расставленные -->
+  <path d="M160 130 L120 200 L125 205 L165 140" fill="#FFE0C0" stroke="#000" stroke-width="1.5"/>
+  <path d="M240 130 L280 200 L275 205 L235 140" fill="#FFE0C0" stroke="#000" stroke-width="1.5"/>
+  
+  <!-- Предплечья и кисти - шире -->
+  <path d="M120 200 L100 260 L105 265 L125 205" fill="#FFE0C0" stroke="#000" stroke-width="1.5"/>
+  <path d="M280 200 L300 260 L295 265 L275 205" fill="#FFE0C0" stroke="#000" stroke-width="1.5"/>
+  <ellipse cx="102" cy="270" rx="8" ry="10" fill="#FFE0C0" stroke="#000" stroke-width="1.5"/>
+  <ellipse cx="298" cy="270" rx="8" ry="10" fill="#FFE0C0" stroke="#000" stroke-width="1.5"/>
+  
+  <!-- Ноги - шире расставленные -->
+  <path d="M170 300 L160 420 L170 430 L180 420 L180 300" fill="#FFE0C0" stroke="#000" stroke-width="1.5"/>
+  <path d="M220 300 L220 420 L230 430 L240 420 L230 300" fill="#FFE0C0" stroke="#000" stroke-width="1.5"/>
+  
+  <!-- Голени и стопы - шире расставленные -->
+  <path d="M160 420 L150 510 L180 510 L180 420" fill="#FFE0C0" stroke="#000" stroke-width="1.5"/>
+  <path d="M220 420 L220 510 L250 510 L240 420" fill="#FFE0C0" stroke="#000" stroke-width="1.5"/>
+  <ellipse cx="165" cy="520" rx="15" ry="10" fill="#FFE0C0" stroke="#000" stroke-width="1.5"/>
+  <ellipse cx="235" cy="520" rx="15" ry="10" fill="#FFE0C0" stroke="#000" stroke-width="1.5"/>
+  
+  <!-- Кости скелета (упрощенно) - адаптированы для более широкой фигуры -->
+  <line x1="200" y1="140" x2="200" y2="280" stroke="#FFFFFF" stroke-width="4" stroke-opacity="0.7"/>
+  <line x1="170" y1="165" x2="230" y2="165" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.7"/>
+  <line x1="160" y1="130" x2="120" y2="200" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.7"/>
+  <line x1="240" y1="130" x2="280" y2="200" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.7"/>
+  <line x1="120" y1="200" x2="100" y2="260" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.7"/>
+  <line x1="280" y1="200" x2="300" y2="260" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.7"/>
+  <line x1="170" y1="300" x2="160" y2="420" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.7"/>
+  <line x1="230" y1="300" x2="240" y2="420" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.7"/>
+  <line x1="160" y1="420" x2="150" y2="510" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.7"/>
+  <line x1="240" y1="420" x2="250" y2="510" stroke="#FFFFFF" stroke-width="3" stroke-opacity="0.7"/>
+  
+  <!-- Название -->
+  <text x="200" y="25" font-size="14" text-anchor="middle" font-weight="bold">Организм человека</text>
+</svg>

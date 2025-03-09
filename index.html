@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адам ағзасындағы макро және микроэлементтер</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        
+        h1 {
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .intro {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .interactive-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .body-map {
+            position: relative;
+            width: 50%;
+            min-width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .body-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+        
+        .element-button {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(52, 152, 219, 0.7);
+            border: 2px solid #2980b9;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .element-button:hover {
+            transform: scale(1.1);
+            background-color: rgba(52, 152, 219, 0.9);
+        }
+        
+        .element-info {
+            width: 100%;
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .element-info h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        
+        .element-info p {
+            margin-top: 10px;
+        }
+        
+        .macro {
+            background-color: rgba(231, 76, 60, 0.7);
+            border: 2px solid #c0392b;
+        }
+        
+        .micro {
+            background-color: rgba(46, 204, 113, 0.7);
+            border: 2px solid #27ae60;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .interactive-section {
+                flex-direction: column;
+            }
+            
+            .body-map {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Адам ағзасындағы макро және микроэлементтер</h1>
+    </header>
+    
+    <div class="container">
+        <section class="intro">
+            <h2>Макро және микроэлементтер дегеніміз не?</h2>
+            <p>Макро және микроэлементтер — ағзаның дұрыс жұмыс істеуі үшін қажетті минералды заттар, олар көптеген биохимиялық процестерге қатысады.</p>
+            
+            <p><strong>Макроэлементтер</strong> — ағзаға үлкен мөлшерде (күніне 100 мг-нан астам) қажет минералды заттар. Оларға кальций, фосфор, магний, натрий, калий және т.б. жатады.</p>
+            
+            <p><strong>Микроэлементтер</strong> — аз мөлшерде (күніне 100 мг-нан аз) қажет минералды заттар. Оларға темір, мырыш, йод, селен, мыс және т.б. жатады.</p>
+            
+            <p>Адам ағзасындағы әртүрлі элементтердің рөлі туралы білу үшін төмендегі суреттегі түймелерді басыңыз.</p>
+        </section>
+        
+        <div class="interactive-section">
+            <div class="body-map">
+                <img src="human-body-diagram-wider.svg" alt="Адам денесінің құрылымы" class="body-image">
+                
+                <!-- Макроэлементтер -->
+                <button class="element-button macro" style="top: 15%; left: 50%" onclick="showElement('calcium')">Ca</button>
+                <button class="element-button macro" style="top: 30%; left: 30%" onclick="showElement('magnesium')">Mg</button>
+                <button class="element-button macro" style="top: 45%; left: 60%" onclick="showElement('potassium')">K</button>
+                <button class="element-button macro" style="top: 55%; left: 40%" onclick="showElement('sodium')">Na</button>
+                <button class="element-button macro" style="top: 75%; left: 55%" onclick="showElement('phosphorus')">P</button>
+                
+                <!-- Микроэлементтер -->
+                <button class="element-button micro" style="top: 25%; left: 60%" onclick="showElement('iron')">Fe</button>
+                <button class="element-button micro" style="top: 40%; left: 35%" onclick="showElement('zinc')">Zn</button>
+                <button class="element-button micro" style="top: 60%; left: 65%" onclick="showElement('iodine')">I</button>
+                <button class="element-button micro" style="top: 80%; left: 35%" onclick="showElement('selenium')">Se</button>
+                <button class="element-button micro" style="top: 20%; left: 40%" onclick="showElement('copper')">Cu</button>
+            </div>
+            
+            <div class="element-info" id="defaultInfo">
+                <h3>Минералды заттардың маңыздылығы</h3>
+                <p>Адам ағзасындағы элементтің рөлін білу үшін суреттегі кез келген элементті басыңыз.</p>
+                <p>Макроэлементтер <span style="color: #c0392b; font-weight: bold;">қызыл</span> түспен, ал микроэлементтер <span style="color: #27ae60; font-weight: bold;">жасыл</span> түспен белгіленген.</p>
+            </div>
+            
+            <!-- Макроэлементтер туралы ақпарат -->
+            <div class="element-info hidden" id="calcium">
+                <h3>Кальций (Ca) - макроэлемент</h3>
+                <p><strong>Негізгі қызметтері:</strong></p>
+                <ul>
+                    <li>Сүйектер мен тістердің қалыптасуы</li>
+                    <li>Жүрек ырғағын реттеу</li>
+                    <li>Қан ұюы</li>
+                    <li>Жүйке импульстарының берілуі</li>
+                    <li>Бұлшықет жиырылуы</li>
+                </ul>
+                <p><strong>Көздері:</strong> сүт өнімдері, жасыл жапырақты көкөністер, жаңғақтар, сүйекті балық.</p>
+                <p><strong>Тапшылық салдары:</strong> остеопороз, рахит, спазмдар, жүрек қызметінің бұзылуы.</p>
+            </div>
+            
+            <div class="element-info hidden" id="magnesium">
+                <h3>Магний (Mg) - макроэлемент</h3>
+                <p><strong>Негізгі қызметтері:</strong></p>
+                <ul>
+                    <li>300-ден астам ферментативті реакцияларға қатысу</li>
+                    <li>Қан қысымын реттеу</li>
+                    <li>Сүйектердің қалыптасуы</li>
+                    <li>Ақуыз синтезі</li>
+                    <li>Глюкоза деңгейін реттеу</li>
+                </ul>
+                <p><strong>Көздері:</strong> дәнді дақылдар, жаңғақтар, бұршақ тұқымдастар, жасыл жапырақты көкөністер, банандар.</p>
+                <p><strong>Тапшылық салдары:</strong> әлсіздік, спазмдар, жүрек ырғағының бұзылуы, қан қысымының жоғарылауы.</p>
+            </div>
+            
+            <div class="element-info hidden" id="potassium">
+                <h3>Калий (K) - макроэлемент</h3>
+                <p><strong>Негізгі қызметтері:</strong></p>
+                <ul>
+                    <li>Су балансын реттеу</li>
+                    <li>Жүйке импульстарын өткізу</li>
+                    <li>Бұлшықет жиырылуын бақылау</li>
+                    <li>Артериялық қысымды реттеу</li>
+                </ul>
+                <p><strong>Көздері:</strong> банандар, картоп, бұршақ тұқымдастар, авокадо, жаңғақтар, кептірілген жемістер.</p>
+                <p><strong>Тапшылық салдары:</strong> бұлшықет әлсіздігі, аритмия, қысымның жоғарылауы, ісіну.</p>
+            </div>
+            
+            <div class="element-info hidden" id="sodium">
+                <h3>Натрий (Na) - макроэлемент</h3>
+                <p><strong>Негізгі қызметтері:</strong></p>
+                <ul>
+                    <li>Су-электролиттік балансты сақтау</li>
+                    <li>Жүйке импульстарын беру</li>
+                    <li>Қан қысымын реттеу</li>
+                    <li>Бұлшықет жиырылуы</li>
+                </ul>
+                <p><strong>Көздері:</strong> ас тұзы, теңіз өнімдері, ірімшіктер, консервіленген өнімдер.</p>
+                <p><strong>Тапшылық салдары:</strong> әлсіздік, бас айналу, спазмдар, қысымның төмендеуі (сирек).</p>
+            </div>
+            
+            <div class="element-info hidden" id="phosphorus">
+                <h3>Фосфор (P) - макроэлемент</h3>
+                <p><strong>Негізгі қызметтері:</strong></p>
+                <ul>
+                    <li>Сүйектер мен тістердің қалыптасуы</li>
+                    <li>АТФ синтезі (жасушаларға арналған энергия)</li>
+                    <li>Жасуша мембраналарының түзілуі</li>
+                    <li>Ақуыздардың, майлардың және көмірсулардың метаболизмі</li>
+                </ul>
+                <p><strong>Көздері:</strong> ет, балық, жұмыртқа, сүт өнімдері, жаңғақтар, тұқымдар.</p>
+                <p><strong>Тапшылық салдары:</strong> сүйектердің әлсіздігі, шаршағыштық, өсудің бұзылуы.</p>
+            </div>
+            
+            <!-- Микроэлементтер туралы ақпарат -->
+            <div class="element-info hidden" id="iron">
+                <h3>Темір (Fe) - микроэлемент</h3>
+                <p><strong>Негізгі қызметтері:</strong></p>
+                <ul>
+                    <li>Қандағы оттегін тасымалдау</li>
+                    <li>Гемоглобин синтезіне қатысу</li>
+                    <li>Иммундық функцияны қолдау</li>
+                    <li>Жасушалық тыныс алу</li>
+                </ul>
+                <p><strong>Көздері:</strong> қызыл ет, бауыр, бұршақ тұқымдастар, шпинат, байытылған дәнді дақылдар.</p>
+                <p><strong>Тапшылық салдары:</strong> анемия, әлсіздік, бозару, иммунитеттің төмендеуі.</p>
+            </div>
+            
+            <div class="element-info hidden" id="zinc">
+                <h3>Мырыш (Zn) - микроэлемент</h3>
+                <p><strong>Негізгі қызметтері:</strong></p>
+                <ul>
+                    <li>300-ден астам ферменттердің жұмысына қатысу</li>
+                    <li>Иммундық жүйені қолдау</li>
+                    <li>ДНҚ синтезі</li>
+                    <li>Жараларды жазу</li>
+                    <li>Өсу және даму</li>
+                </ul>
+                <p><strong>Көздері:</strong> устрицалар, ет, бұршақ тұқымдастар, жаңғақтар, тұқымдар.</p>
+                <p><strong>Тапшылық салдары:</strong> өсудің баяулауы, иммунитеттің төмендеуі, дерматит, шаш түсуі.</p>
+            </div>
+            
+            <div class="element-info hidden" id="iodine">
+                <h3>Йод (I) - микроэлемент</h3>
+                <p><strong>Негізгі қызметтері:</strong></p>
+                <ul>
+                    <li>Қалқанша безі гормондарының синтезі</li>
+                    <li>Зат алмасуды реттеу</li>
+                    <li>Жүйке жүйесінің дамуы</li>
+                    <li>Дене температурасын бақылау</li>
+                </ul>
+                <p><strong>Көздері:</strong> теңіз өнімдері, йодталған тұз, балдырлар, сүт өнімдері.</p>
+                <p><strong>Тапшылық салдары:</strong> зоб, гипотиреоз, метаболизмнің баяулауы, балаларда ақыл-ой кемістігі.</p>
+            </div>
+            
+            <div class="element-info hidden" id="selenium">
+                <h3>Селен (Se) - микроэлемент</h3>
+                <p><strong>Негізгі қызметтері:</strong></p>
+                <ul>
+                    <li>Антиоксиданттық қорғаныс</li>
+                    <li>Иммундық жүйені қолдау</li>
+                    <li>Қалқанша безі гормондарының синтезі</li>
+                    <li>Ауыр металдардан қорғау</li>
+                </ul>
+                <p><strong>Көздері:</strong> бразилия жаңғақтары, балық, теңіз өнімдері, жұмыртқа, ет.</p>
+                <p><strong>Тапшылық салдары:</strong> Кешан ауруы (кардиомиопатия), иммунитеттің төмендеуі, қалқанша безі қызметінің бұзылуы.</p>
+            </div>
+            
+            <div class="element-info hidden" id="copper">
+                <h3>Мыс (Cu) - микроэлемент</h3>
+                <p><strong>Негізгі қызметтері:</strong></p>
+                <ul>
+                    <li>Эритроциттердің түзілуі</li>
+                    <li>Коллаген түзілуі</li>
+                    <li>Темір метаболизмі</li>
+                    <li>Антиоксиданттық қорғаныс</li>
+                    <li>Жүйке импульстарын беру</li>
+                </ul>
+                <p><strong>Көздері:</strong> бауыр, жаңғақтар, тұқымдар, бұршақ тұқымдастар, шоколад, теңіз өнімдері.</p>
+                <p><strong>Тапшылық салдары:</strong> анемия, остеопороз, пигментацияның бұзылуы, неврологиялық бұзылыстар.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 - Адам ағзасындағы макро және микроэлементтер</p>
+        <p>Жумагали Саят</p>
+    </footer>
+    
+    <script>
+        function showElement(elementId) {
+            // Барлық ақпараттық блоктарды жасыру
+            const infoDivs = document.querySelectorAll('.element-info');
+            infoDivs.forEach(div => {
+                div.classList.add('hidden');
+            });
+            
+            // Таңдалған блокты көрсету
+            document.getElementById(elementId).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
